@@ -1,0 +1,72 @@
+.backgroundMenu0 {
+    background-image: url("../image/menu/menu1.png");
+    background-position: center center;
+}
+
+.backgroundMenu1 {
+    background-image: url("../image/menu/menu2.png");
+    background-position: left center;
+}
+
+.backgroundMenu2 {
+    background-image: url("../image/menu/menu3.png");
+    background-position: left center;
+}
+
+.formulaCard {
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    color: white;
+    background-size: cover;
+    box-sizing: border-box;
+    height: 200px;
+    min-width: 250px;
+    flex: 1 1;
+}
+
+.formulaTitle {
+    font-weight: 300;
+    font-size: 2rem;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.formulaDescription {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border-color: white;
+    text-transform: uppercase;
+}
+
+.formulaPrice {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: solid 0.1rem;
+    background-color: #c00a27;
+    border-color: white;
+    text-transform: uppercase;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}
+

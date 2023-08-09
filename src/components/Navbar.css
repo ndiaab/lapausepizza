@@ -1,0 +1,55 @@
+.menu {
+    list-style: none;
+    text-align: center;
+    font-size: 2rem;
+
+    background-color: #cf2e2e;
+    color: white;
+
+    padding: 1rem;
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+.selected {
+    color: white;
+}
+
+.menu li {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    white-space: nowrap;
+    padding: .1rem 1rem;
+}
+.desktopNavbar {
+    display: none;
+}
+
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up)  */
+
+@media (min-width: 576px) {
+
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .desktopNavbar {
+        display: block;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}

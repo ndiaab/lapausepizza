@@ -1,0 +1,81 @@
+p {
+    margin: 0;
+}
+
+.myhead {
+    position: relative;
+    font-size: 1rem;
+}
+
+.header {
+    margin: 1rem;
+    display: none;
+}
+
+a > img {
+    width: 12rem;
+}
+
+a > div > img {
+    width: 12rem;
+}
+
+.contact {
+    float: right;
+    font-weight: 500;
+    text-align: right;
+}
+
+.phone,
+.map {
+    width: 30px;
+    height: 30px;
+}
+
+.phone-header {
+    display: block;
+    position: relative;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.phone {
+    right: 0;
+}
+
+.maps {
+    left: 0;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .header {
+        display: block;
+    }
+    .phone-header {
+        display: none;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}

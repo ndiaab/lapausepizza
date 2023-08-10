@@ -13,13 +13,12 @@ footer{
     text-align: right;
 }
 
-/* footer {
-    display: flex;
-    margin: 1rem 0rem;
-    margin-left: 5%;
-    margin-right: 5%;
+.hideSummaryProduct{
+    display: none;
+
 }
 
-footer div {
-    flex: 1;
-} */
+.displaySummaryProduct {
+    display: block;
+}
+

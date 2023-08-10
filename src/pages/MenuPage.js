@@ -1,4 +1,4 @@
-import { useReducer, useState, useContext, useEffect } from "react";
+import {useState, useContext, useEffect } from "react";
 import { store } from "../App";
 
 import Product from "../components/Product";

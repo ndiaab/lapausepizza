@@ -1,8 +1,10 @@
+import { useState } from "react";
 import "./Footer.css";
 
 import { Link } from "react-router-dom";
 
 const Footer = (props) => {
+    const [selected, setSelected]=useState("");
     return (
         <footer>
             <div className="copyright">Copyright {props.configData.name}</div>
@@ -15,28 +17,32 @@ const Footer = (props) => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
-            <div style={{display:"flex"}}>
+            <div style={{display:"flex", flexFlow:"wrap",     width: "fit-content", marginRight: "auto",
+    marginLeft: "auto"}}>
                 {Object.keys(props.configData.productsData).map((key) => {
                     return (
-                        <ul key={key}>
-                            <h2>{key}</h2>
+                        <div key={key}>
+                            <h2 onClick={()=> key === selected ? setSelected('') : setSelected(key)} style={{margin:"1rem 3rem"}}>{key}</h2>
+                            <ul className={`hideSummaryProduct ${key === selected && 'displaySummaryProduct'}`}
+                            style={{padding:"0", listStyle:"none"}}>
                             {props.configData.productsData[key].map(
                                 (elm, index) => {
                                     return (
                                         <Link
-                                            to={`/produit/${elm.title
+                                            to={`/produit/${elm.type+'/'+elm.title
                                                 .toLowerCase()
                                                 .replaceAll(" ", "-")}`}
                                             key={`link${elm.title+index}`}
                                         >
-                                            <li key={`li${index}`}>
+                                            <li key={`li${index}`} style={{display:"", margin:"1rem"}}>
                                                 {elm.title}
                                             </li>
                                         </Link>
                                     );
                                 }
                             )}
-                        </ul>
+                            </ul>
+                        </div>
                     );
                 })}
             </div>

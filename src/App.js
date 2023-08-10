@@ -1,5 +1,5 @@
 import { createContext, useEffect, useReducer, useState } from "react";
-import { BrowserRouter, Route, Routes, Navigate, useLocation } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate} from "react-router-dom";
 
 import Header from "./components/Header";
 import WelcomePage from "./pages/WelcomePage";
@@ -148,7 +148,7 @@ function App() {
                         <p>@: {configData.email}</p>
                     </div>
                 </div>
-                <div className="container">
+                <div className="App container">
                     <Header
                         configData={configData}
                         sideBar={sideBar}
@@ -183,12 +183,13 @@ function App() {
                                 (product) => {
                                     return (
                                         <Route
-                                            path={`/produit/${product.title
+                                            path={`/produit/${product.type+'/'+product.title
                                                 .toLowerCase()
                                                 .replaceAll(" ", "-")}`}
                                             element={
                                                 <ProductPage
                                                     product={product}
+                                                    type={product.type === "pizza" ? "pizza" : ""}
                                                     configData={configData}
                                                 />
                                             }

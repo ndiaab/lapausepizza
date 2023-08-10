@@ -28,7 +28,7 @@ const WelcomePage = (props) => {
 
     return (
         <>
-            <Banner />
+            <Banner configData={props.configData} />
             <div style={{ margin: "0.5rem" }}>
                 <div>
                     <h2

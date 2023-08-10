@@ -1,25 +1,13 @@
 /* // X-Small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap */
-
-/* // Small devices (landscape phones, 576px and up)  */
+// No media query for `xs` since this is the default */
 
 .filtre {
     white-space: nowrap;
     position: relative;
-    /* background-color: #cf2e2e;
-    text-align: center;
-    overflow: auto;
-    white-space: nowrap;
-    margin: 0;
-    padding: 0;
-    display: block;
-    height: 50px; */
 }
 
 .categories {
     position: relative;
-    overflow: scroll;
-    /* height: 50px; */
 }
 
 .productFilter {
@@ -59,6 +47,7 @@
         font-size: 3.5rem;
 }
 
+/* // Small devices (landscape phones, 576px and up)  */
 @media (min-width: 576px) {
 }
 

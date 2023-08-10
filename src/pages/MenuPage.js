@@ -74,7 +74,7 @@ const MenuPage = (props) => {
                     </p>
                     {selection === "pizza" && (
                         <>
-                            <FilterPizza updateFilter={updateFilter} />
+                            <FilterPizza updateFilter={updateFilter} configData={props.configData}/>
                             <Product
                                 products={pizzas}
                                 price={props.configData.price}

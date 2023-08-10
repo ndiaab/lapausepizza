@@ -15,53 +15,25 @@ const FilterPizza = (props) => {
     return (
         <div className="filter">
             <nav>
-                <ul style={{ textAlign: "center" }}>
-                    <li
-                        className={`filterMenu ${
-                            filterStatus === "all" && "filterMenuSelected"
-                        }`}
-                        onClick={() =>
-                            handleChange("all",[
-                                "Tomate",
-                                "Crème Curry",
-                                "Crème Fraîche",
-                                "Sauce barbecue",
-                                "Sauce salsa",
-                            ])
-                        }
-                    >
-                        Tous
-                    </li>
-                    <li
-                        className={`filterMenu ${
-                            filterStatus === "tomato" && "filterMenuSelected"
-                        }`}
-                        onClick={() => handleChange("tomato", ["Tomate"])}
-                    >
-                        Tomates
-                    </li>
-                    <li
-                        className={`filterMenu ${
-                            filterStatus === "cream" && "filterMenuSelected"
-                        }`}
-                        onClick={() => handleChange("cream", ["Crème Fraîche"])}
-                    >
-                        Crème Fraîche
-                    </li>
-                    <li
-                        className={`filterMenu ${
-                            filterStatus === "other" && "filterMenuSelected"
-                        }`}
-                        onClick={() =>
-                            handleChange("other", [
-                                "Crème Curry",
-                                "Sauce Barbecue",
-                                "Sauce Salsa",
-                            ])
-                        }
-                    >
-                        Autres
-                    </li>
+                <ul>
+                    {Object.keys(props.configData.filter).map((key, index) => {
+                        return (
+                            <li
+                                key={`li ${key + index}`}
+                                className={`filterMenu ${
+                                    filterStatus === key && "filterMenuSelected"
+                                }`}
+                                onClick={() =>
+                                    handleChange(
+                                        key,
+                                        props.configData.filter[key].filterTab
+                                    )
+                                }
+                            >
+                                {props.configData.filter[key].title}
+                            </li>
+                        );
+                    })}
                 </ul>
             </nav>
         </div>

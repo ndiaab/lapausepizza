@@ -47,18 +47,11 @@ const configData = {
         },
     ],
     products: {
-        pizza: "Pizza",
-        paninis: "Paninis",
-        texmex: "Tex-Mex",
-        salade: "Salade",
-        sweet: "Desserts / Boissons",
-    },
-    productsData: {
-        pizza: pizzasJSON,
-        paninis: paninisJSON,
-        texmex: texmexJSON,
-        salade: saladesJSON,
-        sweet: sweetsJSON,
+        pizza:  {title:"Pizza", productsData: pizzasJSON},
+        paninis:{title: "Paninis",productsData: paninisJSON},
+        texmex:{title: "Tex-Mex", productsData: texmexJSON},
+        salade:{title: "Salade", productsData: saladesJSON},
+        sweet: {title:"Desserts / Boissons", productsData: sweetsJSON}
     },
     filter: {
         all: { title: "Tous", filterTab: ["Tomate", "Crème Curry", "Crème Fraîche", "Sauce barbecue", "Sauce salsa"] },

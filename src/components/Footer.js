@@ -19,13 +19,13 @@ const Footer = (props) => {
             ></iframe>
             <div style={{display:"flex", flexFlow:"wrap",     width: "fit-content", marginRight: "auto",
     marginLeft: "auto"}}>
-                {Object.keys(props.configData.productsData).map((key) => {
+                {Object.keys(props.configData.products).map((key) => {
                     return (
                         <div key={key}>
                             <h2 onClick={()=> key === selected ? setSelected('') : setSelected(key)} style={{margin:"1rem 3rem"}}>{key}</h2>
                             <ul className={`hideSummaryProduct ${key === selected && 'displaySummaryProduct'}`}
                             style={{padding:"0", listStyle:"none"}}>
-                            {props.configData.productsData[key].map(
+                            {props.configData.products[key].productsData.map(
                                 (elm, index) => {
                                     return (
                                         <Link

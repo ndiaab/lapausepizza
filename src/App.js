@@ -178,8 +178,8 @@ function App() {
                             element={<Favorites configData={configData} />}
                         />
                         {/* Create a route for each product throught a loop */}
-                        {Object.keys(configData.productsData).map((key) => {
-                            return configData.productsData[key].map(
+                        {Object.keys(configData.products).map((key) => {
+                            return configData.products[key].productsData.map(
                                 (product) => {
                                     return (
                                         <Route

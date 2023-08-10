@@ -33,7 +33,7 @@ const MenuPage = (props) => {
     const [title, setTitle] = useState("pizza");
 
     useEffect(() => {
-        setTitle(configData.products[selection]);
+        setTitle(configData.products[selection].title);
     }, [selection]);
 
     return (
@@ -59,7 +59,7 @@ const MenuPage = (props) => {
                                     }`}
                                     onClick={() => setSelection(key)}
                                 >
-                                    {props.configData.products[key]}
+                                    {props.configData.products[key].title}
                                 </li>
                             );
                         })}

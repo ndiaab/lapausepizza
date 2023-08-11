@@ -25,7 +25,7 @@ const Product = (props) => {
 
     return (
         <div>
-            <section>
+            <section className="Product container">
                 {props.products.map((product, index) => {
                     favoritesList.findIndex((e) => e.title === product.title);
                     const isFavorite =
@@ -38,7 +38,7 @@ const Product = (props) => {
                             : true;
                     return (
                         <article className="Product product" key={index}>
-                            <h2>{product.title}</h2>
+                            <h2 className="Product title">{product.title}</h2>
                             <img
                                 src={isFavorite ? favoritered : favoriteblue}
                                 onClick={() =>
@@ -61,7 +61,7 @@ const Product = (props) => {
                                 {props.price[product.price]}
                             </p>
                             <br />
-                            <p className="Product pizza">
+                            <p className="Product details">
                                 {product.paragraphe}
                             </p>
                         </article>

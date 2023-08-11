@@ -47,11 +47,11 @@ const configData = {
         },
     ],
     products: {
-        pizza:  {title:"Pizza", productsData: pizzasJSON},
-        paninis:{title: "Paninis",productsData: paninisJSON},
-        texmex:{title: "Tex-Mex", productsData: texmexJSON},
-        salade:{title: "Salade", productsData: saladesJSON},
-        sweet: {title:"Desserts / Boissons", productsData: sweetsJSON}
+        pizza: { title: "Pizza", productsData: pizzasJSON },
+        paninis: { title: "Paninis", productsData: paninisJSON },
+        texmex: { title: "Tex-Mex", productsData: texmexJSON },
+        salade: { title: "Salade", productsData: saladesJSON },
+        sweet: { title: "Desserts / Boissons", productsData: sweetsJSON },
     },
     filter: {
         all: { title: "Tous", filterTab: ["Tomate", "Crème Curry", "Crème Fraîche", "Sauce barbecue", "Sauce salsa"] },
@@ -72,7 +72,6 @@ const configData = {
     },
     pizzaDetails: "Pâte à pizza faite maison la veille au soir, origan sur demande.",
     productDetails: "Produits frais, toutes nos viandes sont garanties Halal: jambon de dinde, lardons de veau et chorizo de boeuf.",
-
     // Technical Config
     menu: [
         { title: "Accueil", link: "/" },

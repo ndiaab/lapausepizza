@@ -1,6 +1,8 @@
 import { useState, useContext } from "react";
 import { store } from "../App";
 
+import "./FilterPizza.css"
+
 const FilterPizza = (props) => {
     const [filterStatus, setFilterStatus] = useState("all");
     const { pizzasJSON } = useContext(store);
@@ -13,14 +15,13 @@ const FilterPizza = (props) => {
     };
 
     return (
-        <div className="filter">
             <nav>
                 <ul>
                     {Object.keys(props.configData.filter).map((key, index) => {
                         return (
                             <li
                                 key={`li ${key + index}`}
-                                className={`filterMenu ${
+                                className={`Filter filterMenu ${
                                     filterStatus === key && "filterMenuSelected"
                                 }`}
                                 onClick={() =>
@@ -36,7 +37,6 @@ const FilterPizza = (props) => {
                     })}
                 </ul>
             </nav>
-        </div>
     );
 };
 

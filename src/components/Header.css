@@ -1,6 +1,6 @@
-p {
+/* p {
     margin: 0;
-}
+} */
 
 .myhead {
     position: relative;
@@ -41,7 +41,6 @@ a > div > img {
     margin-left: auto;
     margin-right: auto;
     justify-content: space-between;
-    vertical-align: middle;
     border-style: none;
 }
 

@@ -2,10 +2,8 @@ import Banner from "../components/Banner";
 import { useContext} from "react";
 import Product from "../components/Product";
 import { store } from "../App";
-
 import couscous from "../image/couscous.png";
 import pizzaMoment from "../image/pizza-moment.jpg";
-
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 import "./WelcomePage.css";
@@ -14,17 +12,6 @@ import "./WelcomePage.css";
 const WelcomePage = (props) => {
     const { pizzasJSON, paninisJSON, texmexJSON, sweetsJSON } =
         useContext(store);
-
-    const price = {
-        pizzaprice18: "Junior 9€ | Sénior 13€ | Méga 18€",
-        pizzaprice20: "Junior 9€ | Sénior 15€ | Méga 20€",
-        pizzaprice21: "Junior 9€ | Sénior 15€ | Méga 21€",
-        pizzaprice22: "Junior 9€ | Sénior 16€ | Méga 22€",
-        paniniprice: "7,00€",
-        saladeprice: "7,00€",
-        sweetprice: "3,00€",
-        texmexprice: "6,00€"
-    };
 
     return (
         <>
@@ -42,20 +29,20 @@ const WelcomePage = (props) => {
                     >
                         &nbsp;&nbsp;Nos Formules&nbsp;&nbsp;
                     </h2>
-                    <section style={{ display: "flex" }}>
+                    <section className="WelcomePage container">
                         {/* Formula section */}
                         {props.configData.formulas.map((formula, index) => { 
                             return (
-                                    <article key={index} className={`formulaCard backgroundMenu0 backgroundMenu${index}`}>
+                                    <article key={index} className={`WelcomePage formulaCard backgroundMenu0 backgroundMenu${index}`}>
                                         <div>
-                                            <div className="formulaTitle">
+                                            <div className="WelcomePage formulaTitle">
                                                 {formula.title}
                                             </div>
-                                            <div className="formulaDescription">
-                                                <p>{formula.description}</p>
-                                                {formula.description.length <= props.configData.descriptionLimit && <p>&nbsp;</p>}
+                                            <div className="WelcomePage formulaDescription">
+                                                <span>{formula.description}</span><br/>
+                                                {formula.description.length <= props.configData.descriptionLimit && <span>&nbsp;</span>}
                                             </div>
-                                            <div className="formulaPrice">
+                                            <div className="WelcomePage formulaPrice">
                                                 <b>{formula.price}</b> {formula.deliveryDetails}
                                             </div>
                                         </div>
@@ -65,6 +52,7 @@ const WelcomePage = (props) => {
                     </section>
 
                     <h2
+                    className="WelcomePage"
                         style={{
                             borderBottom: " solid .2rem",
                             borderBottomColor: "#cf2e2e",
@@ -79,7 +67,7 @@ const WelcomePage = (props) => {
                         products={pizzasJSON.filter(
                             (pizza) => pizza.top === "*"
                         )}
-                        price={price}
+                        price={props.configData.price}
                     />
                     <img
                         src={couscous}
@@ -112,7 +100,7 @@ const WelcomePage = (props) => {
                                     (texmex) => texmex.top === "*"
                                 )
                             )}
-                        price={price}
+                        price={props.configData.price}
                     />
                     <img
                         src={pizzaMoment}
@@ -135,7 +123,7 @@ const WelcomePage = (props) => {
                         products={sweetsJSON.filter(
                             (sweet) => sweet.top === "*"
                         )}
-                        price={price}
+                        price={props.configData.price}
                     />
                 </div>
             </div>

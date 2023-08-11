@@ -1,20 +1,20 @@
 /* // X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default */
+.MenuPage.categories {
+    position: relative;
+    overflow: auto;
+}
 
-.filtre {
+.MenuPage.filtre {
     white-space: nowrap;
     position: relative;
 }
 
-.categories {
-    position: relative;
-}
-
-.productFilter {
+.MenuPage.productFilter {
     display: inline;
     white-space: nowrap;
     padding: 0.5rem 1rem;
-    border: solid .1rem;
+    border: solid 0.1rem;
     width: 7rem;
     text-align: center;
     cursor: pointer;
@@ -22,29 +22,45 @@
     margin: 0rem 1rem 0rem 0rem;
 }
 
-.productFilterSelected {
+.productFilter:last-child {
+    margin:0;
+  }
+
+.MenuPage.productFilterSelected {
     background-color: #cf2e2e;
-    border: solid .1rem ;
+    border: solid 0.1rem;
     border-color: #cf2e2e;
     color: white;
 }
 
-.coverMenu{
+.MenuPage.coverMenu {
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 150px;
 }
+/* Default value need to be before all values to overload */
+.MenuPage.coverMenu.salade {
+    background-image: url("../image/categorie/categ-salade.png");
+}
 
-.menuTitle {
-        position: relative;
-        top: 30%;
-        color: white;
-        margin: 0;
-        font-family: Yanone Kaffeesatz, sans-serif;
-        text-shadow: -3px 3px black;
-        font-weight: 400;
-        font-size: 3.5rem;
+.MenuPage.coverMenu.texmex {
+    background-image: url("../image/categorie/categ-texmex.jpg");
+}
+
+.MenuPage.coverMenu.pizza {
+    background-image: url("../image/categorie/categ-pizza.jpg");
+}
+
+.MenuPage.menuTitle {
+    position: relative;
+    top: 30%;
+    color: white;
+    margin: 0;
+    font-family: Yanone Kaffeesatz, sans-serif;
+    text-shadow: -3px 3px black;
+    font-weight: 400;
+    font-size: 3.5rem;
 }
 
 /* // Small devices (landscape phones, 576px and up)  */
@@ -53,21 +69,20 @@
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .coverMenu{
+    .MenuPage.coverMenu {
         height: 250px;
     }
-
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    .productFilter {
+    .MenuPage.productFilter {
         display: block;
         white-space: initial;
         margin-bottom: 1rem;
     }
 
-    .categories {
+    .MenuPage.categories {
         width: 20%;
         float: left;
         height: 100%;

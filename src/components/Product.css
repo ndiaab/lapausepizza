@@ -1,4 +1,4 @@
-.productPrice {
+.Product.productPrice {
     font-family: "Yanone Kaffeesatz", sans-serif;
     color: white;
     font-size: 1.2rem;
@@ -10,23 +10,25 @@
     text-transform: uppercase;
     width: -moz-fit-content;
     width: fit-content;
+    margin:0;
     margin-right: auto;
     margin-left: auto;
 }
 
-.simulationImage {
+.Product.simulationImage {
     height: 250px;
 }
 
-.pizza {
+.Product.details {
     font-style: italic;
     color: #71706c;
     font-size: 0.875em;
     font-weight: 400;
     line-height: 1.6;
+    margin: 0;
 }
 
-section {
+.Product.container {
     display: flex;
     flex-flow: wrap;
     gap: 2rem 1rem;
@@ -34,37 +36,19 @@ section {
     margin-bottom: 1rem;
 }
 
-article {
+.Product.product {
     text-align: center;
     flex: 1;
     padding: 1rem;
     border-radius: 1rem;
     min-width: 15rem;
+    flex-basis: 25%;
 }
 
-h2 {
+.Product.title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.filter {
-    text-align: center;
-}
-
-.filterMenu {
-    cursor: pointer;
-    padding: 0.3rem;
-    margin: 0rem .5rem 0rem 0rem;
-    text-align: center;
-    display: inline-block;
-    box-sizing: border-box;
-    list-style-type: none;
-}
-
-.filterMenuSelected {
-    border-bottom: solid .1rem;
-    border-color: #cf2e2e;
 }
 
 @media (min-width: 576px) {
@@ -78,14 +62,14 @@ h2 {
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    .filterMenu {
+    .Product.filterMenu {
         border: solid .1rem;
         padding: 0.5rem 1rem;
         margin: 0rem 1rem 0rem 0rem;
         width: 10rem;
     }
 
-    .filterMenuSelected {
+    .Product.filterMenuSelected {
         padding: 0.5rem 1rem;
         border: solid .1rem;
         border-color: #cf2e2e;

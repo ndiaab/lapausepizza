@@ -75,17 +75,17 @@ function App() {
                         <Navbar configData={configData} status={status} setStatus={setStatus} />
                     </div>
                     <Routes>
-                        <Route path='*' element={<Navigate to='/404' />} />
-                        <Route path='/404' element={<>NOT FOUND</>} />
-                        <Route path='/' exact element={<WelcomePage configData={configData} />} />
-                        <Route path='/carte' element={<MenuPage configData={configData} />} />
-                        <Route path='/favoris' element={<Favorites configData={configData} />} />
+                        <Route path='/lapausepizza/' exact element={<WelcomePage configData={configData} />} />
+                        <Route path='/lapausepizza/carte' element={<MenuPage configData={configData} />} />
+                        <Route path='/lapausepizza/favoris' element={<Favorites configData={configData} />} />
                         {/* Create a route for each product throught a loop */}
                         {Object.keys(configData.products).map(key => {
                             return configData.products[key].productsData.map(product => {
-                                return <Route path={`/produit/${product.type + "/" + product.title.toLowerCase().replaceAll(" ", "-")}`} element={<ProductPage  configData={configData} product={product} type={product.type === "pizza" ? "pizza" : ""}/>}></Route>;
+                                return <Route path={`/lapausepizza/produit/${product.type + "/" + product.title.toLowerCase().replaceAll(" ", "-")}`} element={<ProductPage  configData={configData} product={product} type={product.type === "pizza" ? "pizza" : ""}/>}></Route>;
                             });
                         })}
+                        <Route path='*' element={<Navigate to='/404' />} />
+                        <Route path='/lapausepizza/404' element={<>NOT FOUND</>} />
                     </Routes>
                     <Footer configData={configData} />
                 </div>

@@ -111,9 +111,9 @@ const configData = {
         "Produits frais, toutes nos viandes sont garanties Halal: jambon de dinde, lardons de veau et chorizo de boeuf.",
     // Technical Config
     menu: [
-        { title: "Accueil", link: "/" },
-        { title: "La carte", link: "/carte" },
-        { title: "Liste d'envie", link: "/favoris" },
+        { title: "Accueil", link: "/lapausepizza/" },
+        { title: "La carte", link: "/lapausepizza/carte" },
+        { title: "Liste d'envie", link: "/lapausepizza/favoris" },
     ],
     descriptionLimit: 45,
     iframeLink:

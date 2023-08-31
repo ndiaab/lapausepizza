@@ -66,7 +66,7 @@ const Footer = (props) => {
                             ].productsData.map((elm, index) => {
                                 return (
                                     <Link
-                                        to={`/produit/${
+                                        to={`/lapausepizza/produit/${
                                             elm.type +
                                             "/" +
                                             elm.title

@@ -18,6 +18,38 @@ const WelcomePage = (props) => {
             <Banner configData={props.configData} />
             <div style={{ margin: "0.5rem" }}>
                 <div>
+                <h2
+                        style={{
+                            borderBottom: " solid .2rem",
+                            borderBottomColor: "#cf2e2e",
+                            width: "fit-content",
+                            marginRight: "auto",
+                            marginLeft: "auto",
+                        }}
+                    >
+                        &nbsp;&nbsp;Promos de la semaine&nbsp;&nbsp;
+                    </h2>
+                    <section className="WelcomePage container">
+                        {/* Formula section */}
+                        {props.configData.promos.map((promo, index) => { 
+                            return (
+                                    <article key={index} className={`WelcomePage formulaCard backgroundMenu0 backgroundMenu${index}`}>
+                                        <div>
+                                            <div className="WelcomePage formulaTitle">
+                                                {promo.title}
+                                            </div>
+                                            <div className="WelcomePage formulaDescription">
+                                                <span>{promo.description}</span><br/>
+                                                {promo.description.length <= props.configData.descriptionLimit && <span>&nbsp;</span>}
+                                            </div>
+                                            <div className="WelcomePage formulaPrice">
+                                                <b>{promo.price}</b> {promo.deliveryDetails}
+                                            </div>
+                                        </div>
+                                    </article>
+                            );
+                        })}
+                    </section>
                     <h2
                         style={{
                             borderBottom: " solid .2rem",

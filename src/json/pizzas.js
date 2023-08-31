@@ -79,7 +79,7 @@ const pizzasData = [
             "Fromage, chèvre, poivrons, oignons, émincé de poulet, thon",
         base: "Crème Fraîche",
         price: "pizzaprice22",
-        top: "",
+        top: "*",
     },
     {
         title: "Dijonnaise",

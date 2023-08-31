@@ -11,7 +11,7 @@ const Favorites = props => {
         <div className='margin05'>
             <div>
                 <p>
-                    Voici la liste de vos favoris <img src={favoritered} alt='' width='15rem' />, celle-ci vous simplifiera votre prise de commande
+                    Voici votre liste de favoris <img src={favoritered} alt='' width='15rem' />, celle-ci simplifiera votre prise de commande
                 </p>
                 <button
                     className='Favorites clearButton'

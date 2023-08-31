@@ -5,7 +5,10 @@ const Banner = (props) => {
         <section className="coverBanner">
             <article>
                 <h1 className="titleBanner">
-                    Bienvenue chez {props.configData.name}
+                    {props.configData.name} 
+                </h1>
+                <h1 className="titleBanner">
+                    Estrées-Saint-Denis
                 </h1>
             </article>
         </section>

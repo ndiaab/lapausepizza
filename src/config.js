@@ -27,6 +27,7 @@ const drinksJSON = drinksData.map((drink) => ({
 
 const configData = {
     name: "La Pause Pizza",
+    root:"/lapausepizza",
     logo: require("./image/logo-pausepizza.png"),
     presentation:
         "Ouvert 7J/7 de 11H30 à 14H, et de 18H à 23H. Fermé le Lundi midi et Dimanche midi.",

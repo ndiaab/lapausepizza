@@ -122,7 +122,7 @@ const WelcomePage = (props) => {
                             marginLeft: "auto",
                         }}
                     >
-                        &nbsp;&nbsp;Panini & Tex-Mex&nbsp;&nbsp;
+                        &nbsp;&nbsp;La pause salée&nbsp;&nbsp;
                     </h2>
                     <Product
                         products={paninisJSON
@@ -149,7 +149,7 @@ const WelcomePage = (props) => {
                             marginLeft: "auto",
                         }}
                     >
-                        &nbsp;Dessert&nbsp;
+                        &nbsp;La pause sucrée&nbsp;
                     </h2>
                     <Product
                         products={sweetsJSON.filter(

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/lapausepizza/static/css/main.575a8fec.css",
-    "main.js": "/lapausepizza/static/js/main.7ab69ea2.js",
+    "main.css": "/lapausepizza/static/css/main.3a3564ce.css",
+    "main.js": "/lapausepizza/static/js/main.7eb7abd3.js",
     "static/js/787.c4e7f8f9.chunk.js": "/lapausepizza/static/js/787.c4e7f8f9.chunk.js",
     "static/media/slider-1.png": "/lapausepizza/static/media/slider-1.f868ac7dc1abd8bc871f.png",
     "static/media/categ-drinks.png": "/lapausepizza/static/media/categ-drinks.09af2a91601a30e8f3fb.png",
@@ -65,6 +65,7 @@
     "static/media/dessert-tiramisu.png": "/lapausepizza/static/media/dessert-tiramisu.3ec3ef9ac5437bf37b4d.png",
     "static/media/menu3.png": "/lapausepizza/static/media/menu3.0da9f9314330a71e3ac5.png",
     "static/media/menu2.png": "/lapausepizza/static/media/menu2.9ad6942ff5929f3f3912.png",
+    "static/media/couscous-cropped.png": "/lapausepizza/static/media/couscous-cropped.6a7fda656c55550d75b0.png",
     "static/media/boisson-oasis.png": "/lapausepizza/static/media/boisson-oasis.0dff03855357cbc41921.png",
     "static/media/pizza-moment.jpg": "/lapausepizza/static/media/pizza-moment.dd77f891143484fd372d.jpg",
     "static/media/boisson-coca.png": "/lapausepizza/static/media/boisson-coca.4e9c18f09a416a27a0cd.png",
@@ -84,12 +85,12 @@
     "static/media/burger-menu.svg": "/lapausepizza/static/media/burger-menu.fc12fbd678bea2ce4ec9524cbe12a170.svg",
     "static/media/phone.svg": "/lapausepizza/static/media/phone.97144e663071b9a185055aa5e0aba392.svg",
     "static/media/map.svg": "/lapausepizza/static/media/map.f9a6da18df30471869646df13d317604.svg",
-    "main.575a8fec.css.map": "/lapausepizza/static/css/main.575a8fec.css.map",
-    "main.7ab69ea2.js.map": "/lapausepizza/static/js/main.7ab69ea2.js.map",
+    "main.3a3564ce.css.map": "/lapausepizza/static/css/main.3a3564ce.css.map",
+    "main.7eb7abd3.js.map": "/lapausepizza/static/js/main.7eb7abd3.js.map",
     "787.c4e7f8f9.chunk.js.map": "/lapausepizza/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.575a8fec.css",
-    "static/js/main.7ab69ea2.js"
+    "static/css/main.3a3564ce.css",
+    "static/js/main.7eb7abd3.js"
   ]
 }

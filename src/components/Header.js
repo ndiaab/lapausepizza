@@ -9,7 +9,7 @@ const Header = (props) => {
         <>
             {/* Desktop Header */}
             <div className="header">
-                <Link to={`${props.configData.root}/`}>
+                <Link to={`/`} onClick={()=>props.setStatus("/")}>
                     <img src={props.configData.logo} alt="logo" />
                 </Link>
                 
@@ -33,7 +33,7 @@ const Header = (props) => {
             {/* Phone Header */}
             <div className="phone-header" style={{}}>
                     <img className="map mini-svg" src={burgerMenu} alt=""  onClick={()=>(props.setSideBar(!props.sideBar))}/>
-                <Link to={`${props.configData.root}/`}>
+                <Link to={`/`}>
                     <div className="logo">
                         <img src={props.configData.logo} alt="logo" />
                     </div>

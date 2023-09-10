@@ -104,7 +104,7 @@ const pizzasData = [
         paragraphe: "Fromage, cocktail de fruits de mer",
         base: "Tomate",
         price: "pizzaprice21",
-        top: "*",
+        top: "",
     },
     {
         title: "Indiana",

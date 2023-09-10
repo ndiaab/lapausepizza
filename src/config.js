@@ -27,7 +27,7 @@ const drinksJSON = drinksData.map((drink) => ({
 
 const configData = {
     name: "La Pause Pizza",
-    root:"/lapausepizza",
+    root:"",
     logo: require("./image/logo-pausepizza.png"),
     presentation:
         "Ouvert 7J/7 de 11H30 à 14H, et de 18H à 23H. Fermé le Lundi midi et Dimanche midi.",
@@ -35,6 +35,10 @@ const configData = {
     email: "contact@lapausepizza.com",
     address: ["62 AVENUE DE FLANDRE", "60190 ESTREES SAINT DENIS"],
     location: "https://goo.gl/maps/pPb5cWB6YXREEHhP8",
+    calendar:{
+        noon:{ description:"Mardi - Samedi", schedules:"11:30 - 14:00"} ,
+        evening: {description:"Tous les jours", schedules:"18:00 - 23:00"}
+    },
     formulas: [
         {
             title: "2 PIZZAS SENIOR",
@@ -76,6 +80,17 @@ const configData = {
         salade: { title: "Salade", productsData: saladesJSON },
         sweet: { title: "Desserts", productsData: sweetsJSON },
         boissons: { title: "Boissons", productsData: drinksJSON },
+        couscous: {
+            title: "Cousous",
+            productsData: [{
+                title: "Couscous Royal",
+                image: require("./image/couscous-cropped.png"),
+                paragraphe: "Couscous 3 viandes : Poulet, merguez, agneau, Notre couscous est accompagné de semoule, légumes et bouillon. Veuillez réserver 48 heures à l’avance. Merci pour votre compréhension.",
+                price: "couscous",
+                type: "couscous",
+                top: "",
+            }]
+        }
     },
     filter: {
         all: {
@@ -96,15 +111,19 @@ const configData = {
         },
     },
     price: {
+        drinkPrice: "Bouteille 3€ | 8Cannette 1,50€ | ",
+        couscous: "15€",
+        iceCreamPrice:"7,00€",
         pizzaprice18: "Junior 9€ | Sénior 13€ | Méga 18€",
         pizzaprice20: "Junior 9€ | Sénior 15€ | Méga 20€",
         pizzaprice21: "Junior 9€ | Sénior 15€ | Méga 21€",
         pizzaprice22: "Junior 9€ | Sénior 16€ | Méga 22€",
         saladeprice: "7,00€",
         saladepricemixte: "5,50€",
-        sweetprice: "5,00€",
+        sweetprice: "3,00€",
         paniniprice: "6,00€",
         texmexprice: "5,00€ - 9,00€ ",
+        waterPrice: "1€ - 50cl"
     },
     pizzaDetails:
         "Pâte à pizza faite maison la veille au soir, origan sur demande.",
@@ -112,9 +131,9 @@ const configData = {
         "Produits frais, toutes nos viandes sont garanties Halal: jambon de dinde, lardons de veau et chorizo de boeuf.",
     // Technical Config
     menu: [
-        { title: "Accueil", link: "/lapausepizza/" },
-        { title: "La carte", link: "/lapausepizza/carte" },
-        { title: "Liste d'envie", link: "/lapausepizza/favoris" },
+        { title: "Accueil", link: "/" },
+        { title: "La carte", link: "/carte" },
+        { title: "Liste d'envie", link: "/favoris" },
     ],
     descriptionLimit: 45,
     iframeLink:

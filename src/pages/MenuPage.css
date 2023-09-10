@@ -52,6 +52,10 @@
     background-image: url("../image/categorie/categ-pizza.jpg");
 }
 
+.MenuPage.coverMenu.boissons {
+    background-image: url("../image/categorie/categ-drinks.png");
+}
+
 .MenuPage.menuTitle {
     position: relative;
     top: 30%;

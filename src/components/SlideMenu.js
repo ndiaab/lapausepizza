@@ -14,10 +14,10 @@ const SlideMenu = props => {
             ))}
             {/* phone number */}
             {props.configData.phonesNumber.map((phoneNumber, index) => (
-                <p key={phoneNumber + index}>Tél: {phoneNumber}</p>
+                <a href={`tel:${phoneNumber}`}><p key={phoneNumber + index}>Tél: {phoneNumber}</p></a>
             ))}
             {/* email */}
-            <p>@: {props.configData.email}</p>
+            <a href={`mailto:${props.configData.email}`}><p>@: {props.configData.email}</p></a>
         </div>
     );
 };

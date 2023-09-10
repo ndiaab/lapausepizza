@@ -8,6 +8,19 @@ const Footer = (props) => {
     return (
         <footer>
             <div className="copyright">Copyright {props.configData.name}</div>
+            <iframe
+                src={props.configData.iframeLink}
+                style={{
+                    border: "0",
+                    textAlign: "left",
+                    display: "inline-block",
+                }}
+                title="maps"
+                width="100%"
+                height="250"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+            />
             <div
                 style={{
                     textAlign: "left",
@@ -26,19 +39,6 @@ const Footer = (props) => {
                 {/* email */}
                 <p>@: {props.configData.email}</p>
             </div>
-            <iframe
-                src={props.configData.iframeLink}
-                style={{
-                    border: "0",
-                    textAlign: "left",
-                    display: "inline-block",
-                }}
-                title="maps"
-                width="50%"
-                height="250"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
             <div
                 style={{
                     display: "",
@@ -53,7 +53,7 @@ const Footer = (props) => {
                         style={{ textAlign: "left" }}
                         onClick={() => setSelected(!selected)}
                     >
-                        Carte :
+                        Carte
                     </h2>
                     <div
                         className={`hideSummaryProduct ${
@@ -66,7 +66,7 @@ const Footer = (props) => {
                             ].productsData.map((elm, index) => {
                                 return (
                                     <Link
-                                        to={`${props.configData.root}/produit/${
+                                        to={`/produit/${
                                             elm.type +
                                             "/" +
                                             elm.title
@@ -74,6 +74,9 @@ const Footer = (props) => {
                                                 .replaceAll(" ", "-")
                                         }`}
                                         key={`link${elm.title + index}`}
+                                        onClick={() => {
+                                            window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+                                          }}
                                     >
                                         <li
                                             key={`li${index}`}

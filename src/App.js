@@ -40,7 +40,7 @@ function App() {
     const [sideBar, setSideBar] = useState(false);
     const [favoritesList, updateFavoritesList] = useReducer(favoriteReducer, initilizeFavorites);
 
-    const [status, setStatus] = useState(window.location.pathname);
+    const [status, setStatus] = useState(!window.location.hash && '/');
 
     useEffect(() => {
         localStorage.setItem("favorites", JSON.stringify(favoritesList));
@@ -61,7 +61,7 @@ function App() {
                 sweetsJSON,
             }}
         >
-            <BrowserRouter>
+            <HashRouter>
                 <div className={`App ${sideBar && "active"}`}></div>
                 <div className={`Back ${sideBar && "active"}`} onClick={() => setSideBar(!sideBar)}></div>
                 <div className={`sideBar ${sideBar && "active"}`} onClick={() => setSideBar(!sideBar)}>
@@ -70,12 +70,12 @@ function App() {
                     <SlideMenu configData={configData} />
                 </div>
                 <div className='App container'>
-                    <Header configData={configData} sideBar={sideBar} setSideBar={setSideBar} />
+                    <Header configData={configData} sideBar={sideBar} setSideBar={setSideBar} setStatus={setStatus}/>
                     <div className='desktopNavbar'>
                         <Navbar configData={configData} status={status} setStatus={setStatus} />
                     </div>
                     <Routes>
-                        <Route path={`${configData.root}`} exact element={<WelcomePage configData={configData} />} />
+                        <Route path={`${configData.root}/`} exact element={<WelcomePage configData={configData} />} />
                         <Route path={`${configData.root}/carte`} element={<MenuPage configData={configData} />} />
                         <Route path={`${configData.root}/favoris`} element={<Favorites configData={configData} />} />
                         {/* Create a route for each product throught a loop */}
@@ -84,12 +84,12 @@ function App() {
                                 return <Route path={`${configData.root}/produit/${product.type + "/" + product.title.toLowerCase().replaceAll(" ", "-")}`} element={<ProductPage  configData={configData} product={product} type={product.type === "pizza" ? "pizza" : ""}/>}></Route>;
                             });
                         })}
-                        <Route path='*' element={<Navigate to={`${configData.root}/404`} />} />
-                        <Route path={`${configData.root}/404`} element={<>NOT FOUND</>} />
+                        <Route path='*' element={<Navigate to={`/404`} />} />
+                        <Route path={`/404`} element={<>NOT FOUND</>} />
                     </Routes>
                     <Footer configData={configData} />
                 </div>
-            </BrowserRouter>
+            </HashRouter>
         </store.Provider>
     );
 }

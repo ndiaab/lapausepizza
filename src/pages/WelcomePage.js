@@ -7,6 +7,7 @@ import pizzaMoment from "../image/pizza-moment.jpg";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 import "./WelcomePage.css";
+import configData from "../config";
 
 
 const WelcomePage = (props) => {
@@ -59,7 +60,7 @@ const WelcomePage = (props) => {
                             marginLeft: "auto",
                         }}
                     >
-                        &nbsp;&nbsp;Nos Formules&nbsp;&nbsp;
+                        &nbsp;Nos Formules&nbsp;
                     </h2>
                     <section className="WelcomePage container">
                         {/* Formula section */}
@@ -93,7 +94,7 @@ const WelcomePage = (props) => {
                             marginLeft: "auto",
                         }}
                     >
-                        &nbsp;&nbsp;Nos top ventes&nbsp;&nbsp;
+                        &nbsp;Nos top ventes&nbsp;
                     </h2>
                     <Product
                         products={pizzasJSON.filter(
@@ -101,12 +102,16 @@ const WelcomePage = (props) => {
                         )}
                         price={props.configData.price}
                     />
-                    <img
-                        src={couscous}
-                        style={{ width: "100%" }}
-                        alt=""
-                        loading="lazy"
-                    />
+                    {/* COUCOUS */}
+                    <div className="WelcomePage containercouscous">
+                            <div className="WelcomePage couscous">
+                            <div className="WelcomePage formulaTitle">{configData.products.couscous.productsData[0].title}<br/></div>
+                            <div className="WelcomePage formulaDescription">{configData.products.couscous.productsData[0].paragraphe}<br/></div>
+                            <div className="WelcomePage formulaPrice">{configData.price[configData.products.couscous.productsData[0].price]}<br/></div>
+                            </div>
+                            
+                    </div>
+                        
                     <div
                         style={{
                             backgroundImage: `url(${pizzaMoment})`,
@@ -122,7 +127,7 @@ const WelcomePage = (props) => {
                             marginLeft: "auto",
                         }}
                     >
-                        &nbsp;&nbsp;La pause salée&nbsp;&nbsp;
+                        &nbsp;Tex-Mex & Paninis&nbsp;
                     </h2>
                     <Product
                         products={paninisJSON
@@ -149,7 +154,7 @@ const WelcomePage = (props) => {
                             marginLeft: "auto",
                         }}
                     >
-                        &nbsp;La pause sucrée&nbsp;
+                        &nbsp;Desserts&nbsp;
                     </h2>
                     <Product
                         products={sweetsJSON.filter(

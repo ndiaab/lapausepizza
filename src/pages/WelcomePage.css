@@ -62,15 +62,35 @@
     margin-left: auto;
 }
 
+.WelcomePage.containercouscous {
+    width: 100%;
+    background-image: url(../image/couscous.png);
+    background-position: center;
+}
+
+.WelcomePage.couscous {
+    width: 100%;
+    padding: 100px;
+}
+
 @media (min-width: 576px) {
+
 }
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    .WelcomePage.couscous {
+        width: 60%;
+    }
+
+    .WelcomePage.containercouscous {
+        background-position: center;
+    }
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/lapausepizza/static/css/main.3a3564ce.css",
+    "main.css": "/lapausepizza/static/css/main.d46a1774.css",
     "main.js": "/lapausepizza/static/js/main.7eb7abd3.js",
     "static/js/787.c4e7f8f9.chunk.js": "/lapausepizza/static/js/787.c4e7f8f9.chunk.js",
     "static/media/slider-1.png": "/lapausepizza/static/media/slider-1.f868ac7dc1abd8bc871f.png",
@@ -85,12 +85,12 @@
     "static/media/burger-menu.svg": "/lapausepizza/static/media/burger-menu.fc12fbd678bea2ce4ec9524cbe12a170.svg",
     "static/media/phone.svg": "/lapausepizza/static/media/phone.97144e663071b9a185055aa5e0aba392.svg",
     "static/media/map.svg": "/lapausepizza/static/media/map.f9a6da18df30471869646df13d317604.svg",
-    "main.3a3564ce.css.map": "/lapausepizza/static/css/main.3a3564ce.css.map",
+    "main.d46a1774.css.map": "/lapausepizza/static/css/main.d46a1774.css.map",
     "main.7eb7abd3.js.map": "/lapausepizza/static/js/main.7eb7abd3.js.map",
     "787.c4e7f8f9.chunk.js.map": "/lapausepizza/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a3564ce.css",
+    "static/css/main.d46a1774.css",
     "static/js/main.7eb7abd3.js"
   ]
 }

@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/lapausepizza/static/css/main.9c8e9862.css",
-    "main.js": "/lapausepizza/static/js/main.7eb7abd3.js",
+    "main.css": "/lapausepizza/static/css/main.3c287340.css",
+    "main.js": "/lapausepizza/static/js/main.f80922c3.js",
     "static/js/787.c4e7f8f9.chunk.js": "/lapausepizza/static/js/787.c4e7f8f9.chunk.js",
-    "static/media/slider-1.png": "/lapausepizza/static/media/slider-1.f868ac7dc1abd8bc871f.png",
+    "static/media/roulette.mp4": "/lapausepizza/static/media/roulette.110d0b4503b967abb490.mp4",
     "static/media/categ-drinks.png": "/lapausepizza/static/media/categ-drinks.09af2a91601a30e8f3fb.png",
     "static/media/couscous.png": "/lapausepizza/static/media/couscous.fd6f6d6f8f7a2ce957c1.png",
     "static/media/categ-salade.png": "/lapausepizza/static/media/categ-salade.3c52543b089c49b03b6e.png",
@@ -71,9 +71,11 @@
     "static/media/boisson-coca.png": "/lapausepizza/static/media/boisson-coca.4e9c18f09a416a27a0cd.png",
     "static/media/boisson-cristaline.png": "/lapausepizza/static/media/boisson-cristaline.8695555c3dd0d2c64f82.png",
     "static/media/categ-pizza.jpg": "/lapausepizza/static/media/categ-pizza.0fab767c999f44310426.jpg",
+    "static/media/slider-2.jpg": "/lapausepizza/static/media/slider-2.4bc0b6efce87aa26944d.jpg",
     "static/media/menu1.png": "/lapausepizza/static/media/menu1.66513fdcb640bf93d75d.png",
     "static/media/YanoneKaffeesatz-VariableFont_wght.ttf": "/lapausepizza/static/media/YanoneKaffeesatz-VariableFont_wght.c775e7c1cf08152a3d99.ttf",
     "static/media/categ-texmex.jpg": "/lapausepizza/static/media/categ-texmex.26afd3dd1725c20f5163.jpg",
+    "static/media/slider-3.jpg": "/lapausepizza/static/media/slider-3.09f4a638bba4c97e4778.jpg",
     "static/media/blur-pizza.png": "/lapausepizza/static/media/blur-pizza.09138174d0ea4e15582e.png",
     "static/media/logo-pausepizza.png": "/lapausepizza/static/media/logo-pausepizza.54fbb35f7d12ab8455f2.png",
     "static/media/blur-salade.png": "/lapausepizza/static/media/blur-salade.c19f076d078dd6463ddb.png",
@@ -85,12 +87,12 @@
     "static/media/burger-menu.svg": "/lapausepizza/static/media/burger-menu.fc12fbd678bea2ce4ec9524cbe12a170.svg",
     "static/media/phone.svg": "/lapausepizza/static/media/phone.97144e663071b9a185055aa5e0aba392.svg",
     "static/media/map.svg": "/lapausepizza/static/media/map.f9a6da18df30471869646df13d317604.svg",
-    "main.9c8e9862.css.map": "/lapausepizza/static/css/main.9c8e9862.css.map",
-    "main.7eb7abd3.js.map": "/lapausepizza/static/js/main.7eb7abd3.js.map",
+    "main.3c287340.css.map": "/lapausepizza/static/css/main.3c287340.css.map",
+    "main.f80922c3.js.map": "/lapausepizza/static/js/main.f80922c3.js.map",
     "787.c4e7f8f9.chunk.js.map": "/lapausepizza/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c8e9862.css",
-    "static/js/main.7eb7abd3.js"
+    "static/css/main.3c287340.css",
+    "static/js/main.f80922c3.js"
   ]
 }

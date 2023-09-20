@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/lapausepizza/static/css/main.3c287340.css",
-    "main.js": "/lapausepizza/static/js/main.f80922c3.js",
+    "main.css": "/lapausepizza/static/css/main.98687674.css",
+    "main.js": "/lapausepizza/static/js/main.80ceadee.js",
     "static/js/787.c4e7f8f9.chunk.js": "/lapausepizza/static/js/787.c4e7f8f9.chunk.js",
-    "static/media/roulette.mp4": "/lapausepizza/static/media/roulette.110d0b4503b967abb490.mp4",
+    "static/media/roulette.gif": "/lapausepizza/static/media/roulette.aa460cea43740ce7ae3f.gif",
     "static/media/categ-drinks.png": "/lapausepizza/static/media/categ-drinks.09af2a91601a30e8f3fb.png",
     "static/media/couscous.png": "/lapausepizza/static/media/couscous.fd6f6d6f8f7a2ce957c1.png",
     "static/media/categ-salade.png": "/lapausepizza/static/media/categ-salade.3c52543b089c49b03b6e.png",
@@ -87,12 +87,12 @@
     "static/media/burger-menu.svg": "/lapausepizza/static/media/burger-menu.fc12fbd678bea2ce4ec9524cbe12a170.svg",
     "static/media/phone.svg": "/lapausepizza/static/media/phone.97144e663071b9a185055aa5e0aba392.svg",
     "static/media/map.svg": "/lapausepizza/static/media/map.f9a6da18df30471869646df13d317604.svg",
-    "main.3c287340.css.map": "/lapausepizza/static/css/main.3c287340.css.map",
-    "main.f80922c3.js.map": "/lapausepizza/static/js/main.f80922c3.js.map",
+    "main.98687674.css.map": "/lapausepizza/static/css/main.98687674.css.map",
+    "main.80ceadee.js.map": "/lapausepizza/static/js/main.80ceadee.js.map",
     "787.c4e7f8f9.chunk.js.map": "/lapausepizza/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c287340.css",
-    "static/js/main.f80922c3.js"
+    "static/css/main.98687674.css",
+    "static/js/main.80ceadee.js"
   ]
 }

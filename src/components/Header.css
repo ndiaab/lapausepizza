@@ -32,9 +32,18 @@ a > div > img {
     height: 30px;
 }
 
+.containerPhoneHeader {
+    position: fixed;
+    height: fit-content;
+    background-color: white;
+    z-index: 1;
+    width: 100%;
+}
+
 .phone-header {
     display: block;
-    position: relative;
+    width: 100%;
+    background-color: rgba(239, 111, 38, 0.2);
     align-items: center;
     padding: 0.5rem 1rem;
     display: flex;

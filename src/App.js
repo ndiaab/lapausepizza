@@ -1,5 +1,5 @@
 import { createContext, useEffect, useReducer, useState } from "react";
-import { BrowserRouter, Route, Routes, Navigate, HashRouter } from "react-router-dom";
+import { Route, Routes, Navigate, HashRouter, BrowserRouter } from "react-router-dom";
 
 import Header from "./components/Header";
 import WelcomePage from "./pages/WelcomePage";
@@ -74,20 +74,23 @@ function App() {
                     <div className='desktopNavbar'>
                         <Navbar configData={configData} status={status} setStatus={setStatus} />
                     </div>
-                    <Routes>
-                        <Route path={`${configData.root}/`} exact element={<WelcomePage configData={configData} />} />
-                        <Route path={`${configData.root}/carte`} element={<MenuPage configData={configData} />} />
-                        <Route path={`${configData.root}/favoris`} element={<Favorites configData={configData} />} />
-                        {/* Create a route for each product throught a loop */}
-                        {Object.keys(configData.products).map(key => {
-                            return configData.products[key].productsData.map(product => {
-                                return <Route path={`${configData.root}/produit/${product.type + "/" + product.title.toLowerCase().replaceAll(" ", "-")}`} element={<ProductPage  configData={configData} product={product} type={product.type === "pizza" ? "pizza" : ""}/>}></Route>;
-                            });
-                        })}
-                        <Route path='*' element={<Navigate to={`/404`} />} />
-                        <Route path={`/404`} element={<>NOT FOUND</>} />
-                    </Routes>
-                    <Footer configData={configData} />
+                    <div className="App subcontainer">
+                        <Routes>
+                            <Route path={`${configData.root}/`} exact element={<WelcomePage configData={configData} />} />
+                            <Route path={`${configData.root}/carte`} element={<MenuPage configData={configData} />} />
+                            <Route path={`${configData.root}/favoris`} element={<Favorites configData={configData} />} />
+                            {/* Create a route for each product throught a loop */}
+                            {Object.keys(configData.products).map(key => {
+                                return configData.products[key].productsData.map(product => {
+                                    return <Route path={`${configData.root}/produit/${product.type + "/" + product.title.toLowerCase().replaceAll(" ", "-")}`} element={<ProductPage  configData={configData} product={product} type={product.type === "pizza" ? "pizza" : ""}/>}></Route>;
+                                });
+                            })}
+                            <Route path='*' element={<Navigate to={`/404`} />} />
+                            <Route path={`/404`} element={<>NOT FOUND</>} />
+                        </Routes>
+                        <Footer configData={configData} />
+                    </div>
+                    
                 </div>
             </HashRouter>
         </store.Provider>

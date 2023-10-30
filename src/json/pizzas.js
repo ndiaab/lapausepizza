@@ -13,7 +13,7 @@ const pizzasData = [
         paragraphe: "Fromage, viande hachée, oignons, poivrons",
         base: "Sauce Barbecue",
         price: "pizzaprice22",
-        top: "*",
+        top: "",
     },
     {
         title: "Burger",
@@ -38,7 +38,7 @@ const pizzasData = [
         paragraphe: "Fromage, viande hachée, oeuf, champignons",
         base: "Tomate",
         price: "pizzaprice21",
-        top: "",
+        top: "*",
     },
     {
         title: "Ch’ti",
@@ -54,7 +54,7 @@ const pizzasData = [
         paragraphe: "Fromage, chèvre, olives",
         base: "Crème Fraîche",
         price: "pizzaprice22",
-        top: "*",
+        top: "",
     },
     {
         title: "Chèvre miel",
@@ -79,7 +79,7 @@ const pizzasData = [
             "Fromage, chèvre, poivrons, oignons, émincé de poulet, thon",
         base: "Crème Fraîche",
         price: "pizzaprice22",
-        top: "*",
+        top: "",
     },
     {
         title: "Dijonnaise",
@@ -227,7 +227,7 @@ const pizzasData = [
         paragraphe: "Fromage, jambon, champignons",
         base: "Tomate",
         price: "pizzaprice20",
-        top: "",
+        top: "*",
     },
     {
         title: "Royale Dionysienne",
@@ -251,7 +251,7 @@ const pizzasData = [
         paragraphe: "Fromage, raclette, reblochon, maroilles",
         base: "Crème Fraîche",
         price: "pizzaprice22",
-        top: "",
+        top: "*",
     },
     {
         title: "Tartiflette",

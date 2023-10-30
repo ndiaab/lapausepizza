@@ -5,6 +5,10 @@ import saladesData from "./json/salades";
 import sweetsData from "./json/sweets";
 import drinksData from "./json/drinks";
 
+//changer texmex par vegetarienne
+
+//livraison max 10km
+
 const pizzasJSON = pizzasData.map((pizza) => ({ ...pizza, type: "pizza" }));
 const paninisJSON = paninisData.map((panini) => ({
     ...panini,
@@ -25,9 +29,14 @@ const drinksJSON = drinksData.map((drink) => ({
     type: "drink",
 }));
 
+const planning = {
+    lunch: "11:30 - 14:00",
+    dinner: "18:00 - 22:30",
+};
+
 const configData = {
     name: "La Pause Pizza",
-    root:"",
+    root: "",
     logo: require("./image/logo-pausepizza.png"),
     presentation:
         "Ouvert 7J/7 de 11H30 à 14H, et de 18H à 23H. Fermé le Lundi midi et Dimanche midi.",
@@ -35,10 +44,14 @@ const configData = {
     email: "contact@lapausepizza.com",
     address: ["62 AVENUE DE FLANDRE", "60190 ESTREES SAINT DENIS"],
     location: "https://goo.gl/maps/pPb5cWB6YXREEHhP8",
-    calendar:{
-        noon:{ description:"Mardi - Samedi", schedules:"11:30 - 14:00"} ,
-        evening: {description:"Tous les jours", schedules:"18:00 - 23:00"}
+    calendar: {
+        monday: { description: "Lundi", schedules: ['Fermé',planning.dinner] },
+        week: { description: "Mardi au Samedi", schedules: [planning.lunch,planning.dinner] },
+        sunday: { description: "Dimanche", schedules: ['Fermé',planning.dinner] },
+
     },
+
+
     formulas: [
         {
             title: "2 PIZZAS SENIOR",
@@ -55,7 +68,7 @@ const configData = {
         {
             title: "MENU ENFANT",
             description:
-                "1 mini pizza au jambon ou 4 nuggets & frites + 1 capri sun + 1 kinder",
+                "1 mini pizza au jambon ou 4 nuggets & frites + 1 capri sun + 1 compote",
             price: "6,50€",
         },
     ],
@@ -82,15 +95,21 @@ const configData = {
         boissons: { title: "Boissons", productsData: drinksJSON },
         couscous: {
             title: "Cousous",
-            productsData: [{
-                title: "Couscous Royal",
-                image: require("./image/couscous-cropped.png"),
-                paragraphe: "Couscous 3 viandes : Poulet, merguez, agneau, Notre couscous est accompagné de semoule, légumes et bouillon. Veuillez réserver 48 heures à l’avance. Merci pour votre compréhension.",
-                price: "couscous",
-                type: "couscous",
-                top: "",
-            }]
-        }
+            productsData: [
+                {
+                    title: "Couscous Royal",
+                    image: require("./image/couscous-cropped.png"),
+                    paragraphe: [
+                        "Couscous 3 viandes : Poulet, merguez, agneau. ",
+                        "Notre couscous est accompagné de semoule, légumes et bouillon. ",
+                        "Veuillez réserver 48 heures à l’avance, merci pour votre compréhension. ",
+                    ],
+                    price: "couscous",
+                    type: "couscous",
+                    top: "",
+                },
+            ],
+        },
     },
     filter: {
         all: {
@@ -111,9 +130,9 @@ const configData = {
         },
     },
     price: {
-        drinkPrice: "Bouteille 3€ | 8Cannette 1,50€ | ",
+        drinkPrice: "Bouteille 3€ | Cannette 1,50€",
         couscous: "15€",
-        iceCreamPrice:"7,00€",
+        iceCreamPrice: "4€ - 100ml | 7€ - 500ml",
         pizzaprice18: "Junior 9€ | Sénior 13€ | Méga 18€",
         pizzaprice20: "Junior 9€ | Sénior 15€ | Méga 20€",
         pizzaprice21: "Junior 9€ | Sénior 15€ | Méga 21€",
@@ -123,7 +142,7 @@ const configData = {
         sweetprice: "3,00€",
         paniniprice: "6,00€",
         texmexprice: "5,00€ - 9,00€ ",
-        waterPrice: "1€ - 50cl"
+        waterPrice: "1€ - 50cl",
     },
     pizzaDetails:
         "Pâte à pizza faite maison la veille au soir, origan sur demande.",

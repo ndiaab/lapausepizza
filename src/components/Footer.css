@@ -1,10 +1,30 @@
-footer{
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+footer {
     box-sizing: border-box;
     /* position: absolute; */
-    padding:.5rem;
+    padding: 0.5rem;
     width: 100%;
     bottom: 0;
-    margin:0;
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+    /* text-align: center; */
+}
+
+td {
+    padding: 0.5rem 1rem;
+}
+
+tr {
+    border-bottom: 1pt solid black;
+}
+
+.textCenter {
+    text-align: center;
 }
 
 .copyright {
@@ -13,12 +33,47 @@ footer{
     text-align: right;
 }
 
-.hideSummaryProduct{
-    display: none;
+.location {
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+}
 
+.iframeMaps {
+    border: 0;
+    text-align: left;
+    display: block;
+    width: 100%;
+    height: 250px;
+}
+
+.hideSummaryProduct {
+    display: none;
 }
 
 .displaySummaryProduct {
     display: block;
 }
 
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .iframeMaps {
+        display: inline-block;
+        width: 50%;
+    }
+    .location {
+        width: 50%;
+    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}

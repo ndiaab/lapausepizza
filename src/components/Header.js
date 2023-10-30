@@ -31,17 +31,19 @@ const Header = (props) => {
                 </div>
             </div>
             {/* Phone Header */}
-            <div className="phone-header" style={{}}>
-                    <img className="map mini-svg" src={burgerMenu} alt=""  onClick={()=>(props.setSideBar(!props.sideBar))}/>
-                <Link to={`/`}>
-                    <div className="logo">
-                        <img src={props.configData.logo} alt="logo" />
-                    </div>
-                </Link>
+            <div className="containerPhoneHeader">
+                <div className="phone-header" style={{}}>
+                        <img className="map mini-svg" src={burgerMenu} alt=""  onClick={()=>(props.setSideBar(!props.sideBar))}/>
+                    <Link to={`/`}>
+                        <div className="logo">
+                            <img src={props.configData.logo} alt="logo" />
+                        </div>
+                    </Link>
 
-                <a href={`tel:${props.configData.phonesNumber[0].replaceAll(' ','')}`}>
-                    <img className="phone mini-svg" src={phone} alt="" />
-                </a>
+                    <a href={`tel:${props.configData.phonesNumber[0].replaceAll(' ','')}`}>
+                        <img className="phone mini-svg" src={phone} alt="" />
+                    </a>
+                </div>
             </div>
         </>
     );

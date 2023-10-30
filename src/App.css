@@ -1,30 +1,33 @@
-.sideBar{
+.sideBar {
     height: 100%;
     width: 250px;
     position: fixed;
     z-index: 2;
-    top:0;
+    top: 0;
     left: -250px;
     background-color: #cf2e2e;
     padding-top: 60px;
     transition: left 0.5s ease;
 }
-.Back{
+.Back {
     height: 100%;
     width: 100%;
     position: fixed;
-    z-index: 1;
-    top:0;
+    z-index: 2;
+    top: 0;
     left: -100%;
     background-color: grey;
     overflow: hidden;
-    opacity: 50%;
+    opacity: 80%;
 }
 
 .App.container {
     position: relative;
     min-height: 100vh;
-    /* padding-bottom: 300px; */
+}
+
+.App.subcontainer {
+    padding-top: 6rem;
 }
 
 .sideBar.active {
@@ -55,14 +58,28 @@
     color: rgb(112, 76, 182);
 }
 
-@keyframes App-logo-float {
-    0% {
-        transform: translateY(0);
+.App.subcontainer {
+    padding-top: 6rem;
+}
+
+@media (min-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .App.subcontainer {
+        padding-top: 0rem;
     }
-    50% {
-        transform: translateY(10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
 }

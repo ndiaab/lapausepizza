@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = (props) => {
+    const handleClick = (elm) => {
+            props.setStatus(elm);
+            window.scrollTo({top: 0, left: 0});
+    }
     return (
         <nav>
             <ul className="menu">
@@ -13,7 +17,7 @@ const Navbar = (props) => {
                                 className={
                                     props.status === elm.link ? "selected" : ""
                                 }
-                                onClick={() => props.setStatus(elm.link)}
+                                onClick={() => handleClick(elm.link)}
                             >
                                 {elm.title}
                             </li>

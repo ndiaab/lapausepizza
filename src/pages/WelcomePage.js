@@ -105,9 +105,12 @@ const WelcomePage = (props) => {
                     {/* COUCOUS */}
                     <div className="WelcomePage containercouscous">
                             <div className="WelcomePage couscous">
-                            <div className="WelcomePage formulaTitle">{configData.products.couscous.productsData[0].title}<br/></div>
-                            <div className="WelcomePage formulaDescription">{configData.products.couscous.productsData[0].paragraphe}<br/></div>
-                            <div className="WelcomePage formulaPrice">{configData.price[configData.products.couscous.productsData[0].price]}<br/></div>
+                            <div className="WelcomePage couscousTitle">{configData.products.couscous.productsData[0].title}<br/></div>
+                            <div className="WelcomePage tata">
+                            {configData.products.couscous.productsData[0].paragraphe.map(element => {
+                                return <div className="WelcomePage coucousDescription">{element}</div>})}
+                            </div>
+                            <div className="WelcomePage couscousPrice">{configData.price[configData.products.couscous.productsData[0].price]}<br/></div>
                             </div>
                             
                     </div>

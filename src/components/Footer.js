@@ -7,27 +7,37 @@ const Footer = (props) => {
     const [selected, setSelected] = useState(false);
     return (
         <footer>
-            <div className="copyright">Copyright {props.configData.name}</div>
-            <iframe
-                src={props.configData.iframeLink}
-                style={{
-                    border: "0",
-                    textAlign: "left",
-                    display: "inline-block",
-                }}
-                title="maps"
-                width="100%"
-                height="250"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-            />
-            <div
-                style={{
-                    textAlign: "left",
-                    display: "inline-block",
-                    width: "fit-content",
-                }}
-            >
+            <div className="copyright"></div>
+            <div className="location">
+                {/* Hours  */}
+                <h2>Horaires du restaurant</h2>
+                <table>
+                    <tbody>
+                        {Object.keys(props.configData.calendar).map((key) => {
+                            return (
+                                <tr className="tableLane">
+                                    <td>
+                                        {
+                                            props.configData.calendar[key]
+                                                .description
+                                        }
+                                    </td>
+                                    {props.configData.calendar[
+                                        key
+                                    ].schedules.map((date) => {
+                                        return (
+                                            <td className="textCenter">
+                                                {date}
+                                            </td>
+                                        );
+                                    })}
+                                </tr>
+                            );
+                        })}
+                    </tbody>
+                </table>
+                <br />
+
                 {/* address */}
                 {props.configData.address.map((lineAddress, index) => (
                     <p key={lineAddress + index}>{lineAddress}</p>
@@ -39,6 +49,14 @@ const Footer = (props) => {
                 {/* email */}
                 <p>@: {props.configData.email}</p>
             </div>
+            <iframe
+                src={props.configData.iframeLink}
+                title="maps"
+                loading="lazy"
+                className="iframeMaps"
+                referrerPolicy="no-referrer-when-downgrade"
+            />
+            <div className="copyright">Copyright {props.configData.name}</div>
             <div
                 style={{
                     display: "",
@@ -75,8 +93,12 @@ const Footer = (props) => {
                                         }`}
                                         key={`link${elm.title + index}`}
                                         onClick={() => {
-                                            window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-                                          }}
+                                            window.scrollTo({
+                                                top: 0,
+                                                left: 0,
+                                                behavior: "smooth",
+                                            });
+                                        }}
                                     >
                                         <li
                                             key={`li${index}`}

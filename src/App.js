@@ -1,5 +1,5 @@
 import { createContext, useEffect, useReducer, useState } from "react";
-import { Route, Routes, Navigate, HashRouter, BrowserRouter } from "react-router-dom";
+import { Route, Routes, Navigate, HashRouter} from "react-router-dom";
 
 import Header from "./components/Header";
 import WelcomePage from "./pages/WelcomePage";
@@ -40,7 +40,7 @@ function App() {
     const [sideBar, setSideBar] = useState(false);
     const [favoritesList, updateFavoritesList] = useReducer(favoriteReducer, initilizeFavorites);
 
-    const [status, setStatus] = useState(!window.location.hash && '/');
+    const [status, setStatus] = useState(!window.location.hash ? '/' : window.location.hash.slice(1));
 
     useEffect(() => {
         localStorage.setItem("favorites", JSON.stringify(favoritesList));
@@ -90,7 +90,6 @@ function App() {
                         </Routes>
                         <Footer configData={configData} />
                     </div>
-                    
                 </div>
             </HashRouter>
         </store.Provider>
